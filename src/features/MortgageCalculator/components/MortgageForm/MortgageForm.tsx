@@ -41,43 +41,45 @@ export default function MortgageForm() {
                     )}
                 />
 
-                <Controller
-                    name="mortgageTerm"
-                    control={control}
-                    render={({field}) => (
-                        <TextInput
-                            label="Mortgage Terms"
-                            error={errors.mortgageTerm?.message}
-                            value={field.value}
-                            onChange={field.onChange}
-                            name="mortgageTerm"
-                            unit="years"
-                            unitPosition="right"
-                        />
-                    )}
-                />
+                <div className="mortgage-form__form-row">
+                    <Controller
+                        name="mortgageTerm"
+                        control={control}
+                        render={({field}) => (
+                            <TextInput
+                                label="Mortgage Terms"
+                                error={errors.mortgageTerm?.message}
+                                value={field.value}
+                                onChange={field.onChange}
+                                name="mortgageTerm"
+                                unit="years"
+                                unitPosition="right"
+                            />
+                        )}
+                    />
 
-                <Controller
-                    name="mortgageInterest"
-                    control={control}
-                    render={({field}) => (
-                        <TextInput
-                            label="Interest Rate"
-                            error={errors.mortgageInterest?.message}
-                            value={field.value}
-                            onChange={field.onChange}
-                            name="mortgageInterest"
-                            unit="%"
-                            unitPosition="right"
-                            allowDecimal
-                        />
-                    )}
-                />
+                    <Controller
+                        name="mortgageInterest"
+                        control={control}
+                        render={({field}) => (
+                            <TextInput
+                                label="Interest Rate"
+                                error={errors.mortgageInterest?.message}
+                                value={field.value}
+                                onChange={field.onChange}
+                                name="mortgageInterest"
+                                unit="%"
+                                unitPosition="right"
+                                allowDecimal
+                            />
+                        )}
+                    />
+                </div>
 
                 <Controller
                     name="mortgageType"
                     control={control}
-                    render={({ field }) => (
+                    render={({field}) => (
                         <Radio label="Mortgage Type" error={errors.mortgageType?.message} required>
                             {mortgageTypes.map((item, index) => (
                                 <Radio.Item
