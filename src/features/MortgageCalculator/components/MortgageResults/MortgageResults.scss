@@ -1,9 +1,10 @@
 .mortgage-results {
   padding          : 2rem 1.5rem;
   background-color : $clr-slate-900;
+  border-radius    : 0 0 0 5rem;
 
   @include breakpoint(small) {
-    padding: 2.5rem;
+    padding : 2.5rem;
   }
 
   &__empty {
@@ -12,15 +13,15 @@
     gap           : 1rem;
 
     @include breakpoint(medium) {
-      align-content: center;
-      height: 100%;
+      align-content : center;
+      height        : 100%;
     }
   }
 
   &__filled {
-    display : grid;
-    gap     : 2.5rem;
-    align-self: flex-start;
+    display    : grid;
+    gap        : 2.5rem;
+    align-self : flex-start;
   }
 
   &__header {
@@ -29,12 +30,12 @@
   }
 
   &__results-containter {
-    display : grid;
-    gap     : 2rem;
-    background-color: hsl(0, 0%, 0%, 0.25);
-    border-top: 4px solid $clr-lime;
-    border-radius: 0.5rem;
-    padding: 1.5rem 1rem;
+    display          : grid;
+    gap              : 2rem;
+    background-color : hsl(0, 0%, 0%, 0.25);
+    border-top       : 4px solid $clr-lime;
+    border-radius    : 0.5rem;
+    padding          : 1.5rem 1rem;
   }
 
   &__text {
