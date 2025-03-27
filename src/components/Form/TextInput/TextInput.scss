@@ -9,38 +9,55 @@
     border-radius: 0.25rem;
     font-weight: 700;
     overflow: hidden;
+    transition: border 0.2s;
+
+    &:hover {
+      border-color: $clr-slate-900;
+    }
+
+    &:focus-within {
+      border-color: $clr-lime;
+
+      .text-input__unit {
+        color: $clr-slate-900;
+        background-color: $clr-lime;
+      }
+    }
 
     &--error {
-      border: 1px solid $clr-error;
+      border-color: $clr-error;
+
+      .text-input__unit {
+        color: $clr-white;
+        background-color: $clr-error;
+      }
     }
   }
 
   &__input {
+    flex: 1;
     border: none;
     padding: 0.75rem 1rem;
     width: 100%;
-
-    &:focus {
-      outline: none;
-    }
+    outline: none;
+    font-weight: inherit;
+    font-size: inherit;
   }
 
   &__unit {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
     padding: 0 0.75rem;
     color: $clr-slate-700;
     background-color: $clr-slate-100;
-
-    &--error {
-      color: $clr-white;
-      background-color: $clr-error;
-    }
+    height: 100%;
+    white-space: nowrap;
+    transition: background-color 0.2s, color 0.2s;
   }
 
   &__error {
     color: $clr-error;
+    font-size: 0.875rem;
   }
 }

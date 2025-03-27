@@ -45,14 +45,13 @@ export default function TextInput({label, error, value, onChange, name, unit, un
     return (
         <div className="text-input">
             <label className="text-md medium text-slate-700" htmlFor={name}>{label}</label>
-            <div className={`text-input__input-container ${!error || 'text-input__input-container--error'}`}>
-                {unit && unitPosition === "left" && (
-                    <p className={`text-input__unit ${!error || "text-input__unit--error"}`}>{unit}</p>
-                )}
+
+            <div className={`text-input__input-container ${!error || "text-input__input-container--error"}`}>
+                {unit && unitPosition === "left" && (<p className={`text-input__unit ${!error || "text-input__unit--error"}`}>{unit}</p>)}
 
                 <input
                     ref={inputRef}
-                    className={`text-input__input`}
+                    className="text-input__input"
                     name={name}
                     id={name}
                     type="text"
@@ -61,9 +60,7 @@ export default function TextInput({label, error, value, onChange, name, unit, un
                     onChange={handleChange}
                 />
 
-                {unit && unitPosition === "right" && (
-                    <p className={`text-input__unit ${!error || "text-input__unit--error"}`}>{unit}</p>
-                )}
+                {unit && unitPosition === "right" && (<p className={`text-input__unit ${!error || "text-input__unit--error"}`}>{unit}</p>)}
             </div>
 
             {error && <p className="text-input__error">{error}</p>}

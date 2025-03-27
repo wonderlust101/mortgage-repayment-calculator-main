@@ -1,0 +1,28 @@
+.mortgage-repayment-calculator {
+  min-height: 100vh;
+  background-color: $clr-slate-100;
+
+  &__content {
+    grid-column: 1 / -1 !important;
+    display: grid;
+    grid-template-rows: 1fr max-content;
+    width: 100%;
+    min-height: 100vh;
+    background-color: $clr-white;
+
+    @include breakpoint(small) {
+      grid-column: 2 !important;
+      grid-template-rows: unset;
+      place-self: center;
+      max-width: 38rem;
+      min-height: unset;
+      border-radius: 1.5rem;
+      overflow: hidden;
+    }
+
+    @include breakpoint(medium) {
+      grid-template-columns: 1fr 1fr;
+      max-width: unset;
+    }
+  }
+}
