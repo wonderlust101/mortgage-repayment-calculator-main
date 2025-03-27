@@ -1,0 +1,62 @@
+@use "../abstract/index" as a;
+
+// Global Styles
+* {
+  font-family : "Plus Jakarta Sans", sans-serif;
+  color: a.$clr-slate-900;
+}
+
+// Heading Styles
+.heading-xl {}
+
+.heading-lg {
+  font-size   : 2.5rem;
+  line-height : 1.25;
+
+  @include a.breakpoint(small) {font-size : 3.5rem;}
+}
+
+.heading-md {
+  font-size   : 1.5rem;
+  line-height : 1.25;
+}
+
+.heading-sm {}
+.heading-xs {}
+
+// Text Styles
+.text-xl {}
+.text-lg {
+  font-size   : 1.125rem;
+  line-height : 1.25;
+}
+
+.text-md {
+  font-size   : 1rem;
+  line-height : 1.5;
+}
+
+.text-sm {}
+
+.text-xs {}
+
+// Font Weight
+.bold {font-weight : 700;}
+.semi-bold {font-weight : 600;}
+.medium {font-weight : 500;}
+.normal {font-weight : 400;}
+.light {font-weight : 300;}
+
+// Font Style
+.italic {font-style : italic;}
+.normal {font-style : normal;}
+
+// Text Alignment
+.text-left {text-align : left;}
+.text-center {text-align : center;}
+.text-right {text-align : right;}
+
+// Text Transformation
+.uppercase {text-transform : uppercase;}
+.lowercase {text-transform : lowercase;}
+.capitalize {text-transform : capitalize;}

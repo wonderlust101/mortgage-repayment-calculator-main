@@ -1,0 +1,18 @@
+.button {
+  all : unset;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  border-radius: 50rem;
+  cursor: pointer;
+
+  &--lime {
+    color: $clr-slate-900;
+    background-color: $clr-lime;
+  }
+
+  &--med {
+    padding: 1rem 2.5rem;
+  }
+}

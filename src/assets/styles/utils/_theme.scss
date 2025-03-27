@@ -1,0 +1,6 @@
+@use "../abstract" as a;
+
+.text-lime { color: a.$clr-lime}
+.text-slate-700 {color: a.$clr-slate-700}
+.text-slate-300 {color: a.$clr-slate-300}
+.text-white { color: a.$clr-white}

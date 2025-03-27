@@ -1,0 +1,46 @@
+.text-input {
+  display: grid;
+  gap: 0.75rem;
+
+  &__input-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid $clr-slate-700;
+    border-radius: 0.25rem;
+    font-weight: 700;
+    overflow: hidden;
+
+    &--error {
+      border: 1px solid $clr-error;
+    }
+  }
+
+  &__input {
+    border: none;
+    padding: 0.75rem 1rem;
+    width: 100%;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__unit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0 0.75rem;
+    color: $clr-slate-700;
+    background-color: $clr-slate-100;
+
+    &--error {
+      color: $clr-white;
+      background-color: $clr-error;
+    }
+  }
+
+  &__error {
+    color: $clr-error;
+  }
+}
